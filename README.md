@@ -82,4 +82,52 @@ Moving file.jpg ...
 
 
 This script is an efficient solution for automated file organization and renaming, especially useful for monitoring download folders or other file-heavy directories.
-____________________________________________________________________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________________________________________________________
+
+# 2. File Organizer Script
+
+This Python script is designed to automatically organize files in a specified directory based on their type (e.g., images, documents, videos). It scans the source directory for files, identifies their extensions, and then moves them into subdirectories for easier management.
+
+## Requirements
+
+- Python 3.x
+- `os` and `shutil` modules (included with Python)
+
+## How It Works
+
+1. **Source and Destination Directories**:  
+   The script takes files from a source directory and moves them to a destination directory. Both directories are set at the beginning of the script.
+
+2. **File Types Handled**:
+   - **Images**: `.gif`, `.png`, `.jpg`, `.jpeg` files are moved to a subfolder called `imagefiles`.
+   - **Documents**: `.pdf`, `.docx`, `.txt` files are moved to a subfolder called `documentfiles`.
+   - **Videos**: `.mp4`, `.mkv`, `.avi` files are moved to a subfolder called `videofiles`.
+   - **Other Files**: All other file types are moved to a subfolder called `others`.
+
+3. **Folder Creation**:  
+   If the destination folder for a file type does not exist, it is created automatically.
+
+4. **File Movement**:  
+   Each file is moved from the source directory to its corresponding subfolder in the destination directory.
+
+## Usage
+
+1. **Edit the Directory Paths**:  
+   Update the `from_dir` and `to_dir` variables in the script to match your source and destination paths.
+
+2. **Run the Script**:  
+   Execute the script in your Python environment.
+
+3. **Organize Files**:  
+   The script will organize all files based on their extensions into appropriate subfolders.
+
+## Example
+
+```python
+from_dir = "c:/Users/HP EliteBook 840 G4/Downloads"
+to_dir = "c:/Users/HP EliteBook 840 G4/Downloads"
+```
+
+In this example, files from the `Downloads` folder are organized into subfolders within the same directory.
+
+---
